@@ -1,6 +1,4 @@
-module MYADDR::MyModule{
-    use std::debug;
-    
+module MYADDR::MyModule{        
     struct Country has drop{
         id: u8,
         population: u64
@@ -22,8 +20,9 @@ module MYADDR::MyModule{
         country.population
     }    
 
-    #[test]
+    #[test]    
     public fun main(){
+        use std::debug;
         let val: u8 = 10;
         debug::print<u8>(&val);
 

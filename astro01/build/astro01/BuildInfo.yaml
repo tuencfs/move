@@ -4,10 +4,10 @@ compiled_package_info:
   address_alias_instantiation:
     MYADDR: 0000000000000000000000000000eeff
     std: "00000000000000000000000000000001"
-  source_digest: 72030E8C570A59DDED2CCCE04B26037CC841D4DE15F699215850AC67202A3DC3
+  source_digest: CEA20C6AA10CA878F8AAEFC92F52C4E9146047EC19621052CB22D49D6AB5510E
   build_flags:
-    dev_mode: true
-    test_mode: true
+    dev_mode: false
+    test_mode: false
     generate_docs: false
     generate_abis: false
     install_dir: ~
