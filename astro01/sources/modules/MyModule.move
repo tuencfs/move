@@ -4,6 +4,14 @@ module MYADDR::MyModule{
         population: u64
     }
 
+    struct Box<T> has drop{
+        value: T
+    }
+
+    struct Squard<phantom T> has drop{
+        value: u64
+    }
+
     public fun new_country(c_id: u8, c_population: u64): Country {
         let country = Country{
             id: c_id,
@@ -20,17 +28,7 @@ module MYADDR::MyModule{
         country.population
     }    
 
-    #[test]    
-    public fun main(){
-        use std::debug;
-        let val: u8 = 10;
-        debug::print<u8>(&val);
-
-        let con = new_country(10, 250);
-        let id = get_country_id(&con);
-        let pop = get_country_pop(&con);
-
-        debug::print<u8>(&id);
-        debug::print<u64>(&pop);
-    }
+    public fun create_box(value: u64) : Box<u64>{
+        Box<u64>{ value }
+    }    
 }
